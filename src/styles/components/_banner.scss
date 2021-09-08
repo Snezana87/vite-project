@@ -1,0 +1,9 @@
+.banner-wrapper {
+    &--primary {
+        @apply bg-blue-200;
+    }
+
+    &--secondary {
+        @apply bg-green-200;
+    }
+}
