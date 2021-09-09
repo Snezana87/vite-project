@@ -30,3 +30,7 @@ export const PrimaryCard = Template.bind({});
 PrimaryCard.args = {
   ...CardStories.PrimaryCard.args,
 };
+export const SecondaryCard = Template.bind({});
+SecondaryCard.args = {
+  ...CardStories.SecondaryCard.args,
+};

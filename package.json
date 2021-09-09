@@ -6,7 +6,8 @@
     "build": "vite build",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=d16e0e1dd222"
   },
   "dependencies": {
     "react": "^17.0.0",

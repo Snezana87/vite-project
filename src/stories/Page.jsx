@@ -8,15 +8,6 @@ import { Banner } from './Banner';
 import { Card } from './Card';
 import '../styles/components/_page.scss';
 
-
-const cardList = [
-  { id: 1, name: 'Primary', description: 'Primary card description'},
-  { id: 2, name: 'Secondary', description: 'Secondary card description' },
-  { id: 3, name: 'Primary', description: 'Primary card description'},
-  { id: 4, name: 'Secondary', description: 'Secondary card description' },
-  { id: 5, name: 'Primary', description: 'Primary card description'},
-  { id: 6, name: 'Secondary', description: 'Secondary card description' },
-];
 export const Page = ({ user, onLogin, onLogout, onCreateAccount, backgroundColor }) => (
   <article>
     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />
@@ -75,12 +66,12 @@ export const Page = ({ user, onLogin, onLogout, onCreateAccount, backgroundColor
       </div>
       <div className="grid grid-cols-1">
       <Table/>
-      <Banner />
+      <Banner backgroundColor={backgroundColor}/>
       </div>
       <div className="grid grid-cols-1">
-        {cardList && cardList.map(item => {
-          <Card item= {item} key={item.id} description={item.description} name={item.name}/>
-        })}
+          <Card primary/>
+          <Card secondary/>
+          <Card large/>
       </div>
     </section>
     <Footer user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />
@@ -91,8 +82,16 @@ Page.propTypes = {
   onLogin: PropTypes.func.isRequired,
   onLogout: PropTypes.func.isRequired,
   onCreateAccount: PropTypes.func.isRequired,
+  primary: PropTypes.boolean,
+  secondary: PropTypes.boolean, 
+  large: PropTypes.boolean,
+  backgroundColor: PropTypes.string
 };
 
 Page.defaultProps = {
   user: null,
+  primary: false,
+  secondary: false, 
+  large: false,
+  backgroundColor: null
 };

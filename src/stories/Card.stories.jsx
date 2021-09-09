@@ -23,3 +23,7 @@ SecondaryCard.args = {
   backgroundColor: 'bg-green-400'
 };
 
+export const LargeCard = Template.bind({});
+LargeCard.args = {
+  backgroundColor: 'bg-purple-300'
+};
